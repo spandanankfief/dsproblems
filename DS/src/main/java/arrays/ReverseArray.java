@@ -20,9 +20,23 @@ public class ReverseArray {
     public static void main(String[] args) {
         int arr[] = {2,6,9,10,7,5,4};
         System.out.println("Original Array: \n" + Arrays.toString(arr));
-        reverseArray(arr,arr.length);
-
-
-
+        //reverseArray(arr,arr.length);
+        reverseArr(arr, arr.length);
     }
+
+    public static int[] reverseArr(int arr[], int size){
+        int start = 0;
+        int end = size-1;
+
+        while (start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        System.out.println("Reversed Array: \n" + Arrays.toString(arr));
+        return arr;
+    }
+
 }

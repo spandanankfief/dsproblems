@@ -41,7 +41,7 @@ public class PrintAllSubArrays {
         int largestSum = 0;
         for(int i=0; i<n; i++){
             currSum+= arr[i];
-            if (currSum < 0){
+            if (currSum < 0){ // reset if sum goes negative
                 currSum = 0;
             }
             largestSum = Math.max(largestSum,currSum);
@@ -51,8 +51,8 @@ public class PrintAllSubArrays {
 
     public static void main (String[]args){
         int[] arr = new int[]{-2,3,4,-1,5,-12,6,1,3};
-        System.out.println("printAllSubArrays : "+printAllSubArrays(arr, arr.length));
-        System.out.println("printLargestSumOfSubArrays : "+printLargestSumOfSubArrays(arr, arr.length));
+      //  System.out.println("printAllSubArrays : "+printAllSubArrays(arr, arr.length));
+       // System.out.println("printLargestSumOfSubArrays : "+printLargestSumOfSubArrays(arr, arr.length));
         System.out.println("KadanesAlgo : "+KadanesAlgo(arr, arr.length));
     }
 

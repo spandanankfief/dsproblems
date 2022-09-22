@@ -21,7 +21,12 @@ public class OddEvenSubSequence {
                 resultArr.add(A.get(i));
             }
         }
-        System.out.println(resultArr);
+        System.out.println(resultArr.toString()
+                .replace(",", "")
+                .replace("[", "")
+                .replace("]", "")
+                .trim()   );
+
         return resultArr.size();
 
     }
@@ -39,8 +44,8 @@ public class OddEvenSubSequence {
     }
 
     public static void main(String[] args) {
-       // ArrayList<Integer> resultArr = new ArrayList<Integer>(Arrays.asList(12, 10, 28, 37, 43, 40, 14, 12, 48));
-        //System.out.println(solve(resultArr));
-        System.out.println(solve(new int[]{1,2,3,4},7));
+       ArrayList<Integer> resultArr = new ArrayList<Integer>(Arrays.asList(12, 10, 28, 37, 43, 40, 14, 12, 48));
+       System.out.println(solve(resultArr));
+        //System.out.println(solve(new int[]{1,2,3,4},7));
     }
 }
